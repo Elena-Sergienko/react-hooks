@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import useInput from "./hooks/useInput";
 import Hover from "./components/Hover";
+import List from "./components/List";
 
 // https://www.youtube.com/watch?v=ks8oftGP2oc
-// 9:32
+// 20:29
 
 function App() {
     const username = useInput('');
@@ -16,9 +17,16 @@ function App() {
             <input type="text" {...username} placeholder="Username"/>
             <input type="text" {...password} placeholder="Password"/>
             <button onClick={() => console.log(username, password)}>Click</button>
+
             <hr/>
+
             <h3>useHover</h3>
             <Hover/>
+
+            <hr/>
+
+            <h3>List</h3>
+            <List/>
         </div>
     );
 }
